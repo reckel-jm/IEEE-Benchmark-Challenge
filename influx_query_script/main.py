@@ -20,6 +20,10 @@ TOTAL_END_MS   = 1767221999999  # 31.12.2025
 CHUNK_SIZE_MS  = 14 * 24 * 60 * 60 * 1000  # 14 days
 
 # The running query template with placeholders for start and end timestamps
+# Parameters:
+# "name": A name for the query, used for logging.
+# "query_template": The InfluxDB query template with placeholders {start} and {end} for the time range in milliseconds.
+# "filename": The name of the CSV file where the results will be saved.
 queries =  [ {
     "name": "weather",
     "query_template": """
